@@ -1,0 +1,78 @@
+syntax = "proto3";
+package tag;
+service TagService{
+  rpc  add(AddTagRequest) returns (AddTagResponse);
+  rpc  del(DelTagRequest) returns (DelTagResponse);
+  rpc  edit(EditTagRequest) returns (EditTagResponse);
+  rpc  find(FindTagRequest) returns (FindTagResponse);
+  rpc  getAll(GetTagAllRequest) returns (GetTagAllResponse);
+}
+// 添
+message AddTagRequest{
+  string name = 2;
+  string listId = 3;
+}
+message AddTagResponse{
+  string id = 1;
+  string name = 2;
+  string listId = 3;
+}
+// 删
+message DelTagRequest{
+  string id = 1;
+}
+
+message DelTagResponse {
+  bool success = 1;
+}
+
+// 改
+message EditTagRequest{
+  string id = 1;
+  string name = 2;
+  string listId = 3;
+}
+message EditTagResponse{
+  string id = 1;
+  string name = 2;
+  string listId = 3;
+}
+// 查询
+message FindTagRequest{
+  string id = 1;
+
+}
+
+message FindTagResponse{
+  string id = 1;
+  string name = 2;
+  string listId = 3;
+  List list = 4;
+}
+
+// 查询列表
+
+message GetTagAllRequest{
+  optional int32 page = 1;
+  int32 pageSize = 2;
+}
+
+message GetTagAllResponse {
+  int32 count = 1;
+  repeated Tag data = 2;
+}
+
+message Tag {
+  string id = 1;
+  string name = 2;
+  string listId = 3;
+}
+
+message List {
+  string id = 1;
+  string title = 2;
+  string content = 3;
+  string createdAt = 4;
+  string updatedAt = 5;
+  repeated Tag tag = 6;
+}

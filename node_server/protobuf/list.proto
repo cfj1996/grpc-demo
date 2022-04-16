@@ -1,0 +1,89 @@
+syntax = "proto3";
+package list;
+
+
+service ListService {
+  rpc add(AddListRequest) returns (AddListResponse);
+  rpc del(DelListRequest) returns (DelListResponse);
+  rpc edit(EditListRequest) returns (EditListResponse);
+  rpc find(FindListRequest) returns (FindListResponse);
+  rpc getAll(GetListAllRequest) returns (GetListAllResponse);
+}
+// 添加
+message AddListRequest {
+  string title = 1;
+  string content = 2;
+  repeated LinkAddTag tags = 3;
+}
+message LinkAddTag{
+  string name = 1;
+}
+message AddListResponse {
+  string id = 1;
+  string title = 2;
+  string content = 3;
+  string createdAt = 4;
+  string updatedAt = 5;
+  repeated Tag tags = 6;
+}
+// 删除
+message DelListRequest {
+  string id = 1;
+}
+
+message DelListResponse {
+  bool success = 1;
+}
+// 编辑
+message EditListRequest{
+  string id = 1;
+  string title = 2;
+  string content = 3;
+  repeated EditListTag tags = 4;
+}
+message EditListTag{
+  string id = 1;
+  string name = 2;
+}
+message EditListResponse {
+  string id = 1;
+  string title = 2;
+  string content = 3;
+  string createdAt = 4;
+  string updatedAt = 5;
+  repeated Tag tags = 6;
+}
+// 查询
+message FindListRequest {
+  string id = 1;
+}
+message FindListResponse{
+  string id = 1;
+  string title = 2;
+  string content = 3;
+  string createdAt = 4;
+  string updatedAt = 5;
+  repeated Tag tags = 6;
+}
+// 查询所有
+message GetListAllRequest {
+  optional int32 page = 1;
+  int32 pageSize = 2;
+}
+message GetListAllResponse {
+  int32 count = 1;
+  repeated List data = 2;
+}
+message List {
+  string id = 1;
+  string title = 2;
+  string content = 3;
+  string createdAt = 4;
+  string updatedAt = 5;
+  repeated Tag tags = 6;
+}
+message Tag {
+  string id = 1;
+  string name = 2;
+  string listId = 3;
+}
