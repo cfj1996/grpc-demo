@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  node-service:
+    build:
+      context:  ./
+      dockerfile: ./node_server/DockerFile
+    image: grpc/node-service
+    ports:
+      - "9090:9090"
+
+  envoy:
+    build:
+      context: ./
+      dockerfile: ./envoy/DockerFile
+    image: grpc/envoy
+    ports:
+      - "8080:8080"
+    links:
+      - node-service

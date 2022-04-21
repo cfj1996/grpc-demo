@@ -10,13 +10,15 @@ import {
   EditListRequest,
   EditListTag,
   FindListRequest,
-  GetListAllRequest
+  GetListAllRequest,
+  SearchRequest
 } from '../proto-build/list_pb';
 import { ListServiceClient } from '../proto-build/ListServiceClientPb';
 import { UnaryInterceptor } from 'grpc-web';
+
+const searchRequest = new SearchRequest()
 const intercept1: UnaryInterceptor<any, any> = {
   intercept: function(request, invoker) {
-    console.log('metadata', request.getMetadata());
     return invoker(request)
   }
 }

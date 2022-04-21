@@ -87,3 +87,25 @@ message Tag {
   string name = 2;
   string listId = 3;
 }
+
+message SearchRequest {
+  string query = 1;
+  int32 page_number = 3;
+  int32 result_per_page = 5;
+  enum Corpus {
+    UNIVERSAL = 0;
+    WEB = 1;
+    IMAGES = 2;
+    LOCAL = 3;
+    NEWS = 4;
+    PRODUCTS = 5;
+    VIDEO = 6;
+  }
+  Corpus corpus = 7;
+  oneof test_oneof {
+    string name = 9;
+    string sub_message = 11;
+  }
+
+  map<string, int32> map_data = 13;
+}
