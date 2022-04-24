@@ -359,7 +359,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.list.AddListRequest.repeatedFields_ = [3];
+proto.list.AddListRequest.repeatedFields_ = [5];
 
 
 
@@ -393,7 +393,7 @@ proto.list.AddListRequest.prototype.toObject = function(opt_includeInstance) {
 proto.list.AddListRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     title: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    content: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    content: jspb.Message.getFieldWithDefault(msg, 3, ""),
     tagsList: jspb.Message.toObjectList(msg.getTagsList(),
     proto.list.LinkAddTag.toObject, includeInstance)
   };
@@ -436,11 +436,11 @@ proto.list.AddListRequest.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {string} */ (reader.readString());
       msg.setTitle(value);
       break;
-    case 2:
+    case 3:
       var value = /** @type {string} */ (reader.readString());
       msg.setContent(value);
       break;
-    case 3:
+    case 5:
       var value = new proto.list.LinkAddTag;
       reader.readMessage(value,proto.list.LinkAddTag.deserializeBinaryFromReader);
       msg.addTags(value);
@@ -484,14 +484,14 @@ proto.list.AddListRequest.serializeBinaryToWriter = function(message, writer) {
   f = message.getContent();
   if (f.length > 0) {
     writer.writeString(
-      2,
+      3,
       f
     );
   }
   f = message.getTagsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      3,
+      5,
       f,
       proto.list.LinkAddTag.serializeBinaryToWriter
     );
@@ -518,11 +518,11 @@ proto.list.AddListRequest.prototype.setTitle = function(value) {
 
 
 /**
- * optional string content = 2;
+ * optional string content = 3;
  * @return {string}
  */
 proto.list.AddListRequest.prototype.getContent = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
@@ -531,17 +531,17 @@ proto.list.AddListRequest.prototype.getContent = function() {
  * @return {!proto.list.AddListRequest} returns this
  */
 proto.list.AddListRequest.prototype.setContent = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
- * repeated LinkAddTag tags = 3;
+ * repeated LinkAddTag tags = 5;
  * @return {!Array<!proto.list.LinkAddTag>}
  */
 proto.list.AddListRequest.prototype.getTagsList = function() {
   return /** @type{!Array<!proto.list.LinkAddTag>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.list.LinkAddTag, 3));
+    jspb.Message.getRepeatedWrapperField(this, proto.list.LinkAddTag, 5));
 };
 
 
@@ -550,7 +550,7 @@ proto.list.AddListRequest.prototype.getTagsList = function() {
  * @return {!proto.list.AddListRequest} returns this
 */
 proto.list.AddListRequest.prototype.setTagsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 3, value);
+  return jspb.Message.setRepeatedWrapperField(this, 5, value);
 };
 
 
@@ -560,7 +560,7 @@ proto.list.AddListRequest.prototype.setTagsList = function(value) {
  * @return {!proto.list.LinkAddTag}
  */
 proto.list.AddListRequest.prototype.addTags = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.list.LinkAddTag, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.list.LinkAddTag, opt_index);
 };
 
 

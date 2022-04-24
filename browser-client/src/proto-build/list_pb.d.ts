@@ -395,3 +395,63 @@ export namespace Tag {
   }
 }
 
+export class SearchRequest extends jspb.Message {
+  getQuery(): string;
+  setQuery(value: string): SearchRequest;
+
+  getPageNumber(): number;
+  setPageNumber(value: number): SearchRequest;
+
+  getResultPerPage(): number;
+  setResultPerPage(value: number): SearchRequest;
+
+  getCorpus(): SearchRequest.Corpus;
+  setCorpus(value: SearchRequest.Corpus): SearchRequest;
+
+  getName(): string;
+  setName(value: string): SearchRequest;
+
+  getSubMessage(): string;
+  setSubMessage(value: string): SearchRequest;
+
+  getMapDataMap(): jspb.Map<string, number>;
+  clearMapDataMap(): SearchRequest;
+
+  getTestOneofCase(): SearchRequest.TestOneofCase;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): SearchRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: SearchRequest): SearchRequest.AsObject;
+  static serializeBinaryToWriter(message: SearchRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): SearchRequest;
+  static deserializeBinaryFromReader(message: SearchRequest, reader: jspb.BinaryReader): SearchRequest;
+}
+
+export namespace SearchRequest {
+  export type AsObject = {
+    query: string,
+    pageNumber: number,
+    resultPerPage: number,
+    corpus: SearchRequest.Corpus,
+    name: string,
+    subMessage: string,
+    mapDataMap: Array<[string, number]>,
+  }
+
+  export enum Corpus { 
+    UNIVERSAL = 0,
+    WEB = 1,
+    IMAGES = 2,
+    LOCAL = 3,
+    NEWS = 4,
+    PRODUCTS = 5,
+    VIDEO = 6,
+  }
+
+  export enum TestOneofCase { 
+    TEST_ONEOF_NOT_SET = 0,
+    NAME = 9,
+    SUB_MESSAGE = 11,
+  }
+}
+

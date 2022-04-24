@@ -11,12 +11,10 @@ import {
   EditListTag,
   FindListRequest,
   GetListAllRequest,
-  SearchRequest
 } from '../proto-build/list_pb';
 import { ListServiceClient } from '../proto-build/ListServiceClientPb';
 import { UnaryInterceptor } from 'grpc-web';
-
-const searchRequest = new SearchRequest()
+// 拦截器
 const intercept1: UnaryInterceptor<any, any> = {
   intercept: function(request, invoker) {
     return invoker(request)
@@ -36,6 +34,7 @@ export const addList = (data: AddListRequest.AsObject) => {
     tagRequest.setName(tag.name);
     addRequest.addTags(tagRequest, index);
   });
+  console.log('addRequest', addRequest);
   return listService.add(addRequest, {
     token: '123'
   }).then(response => {

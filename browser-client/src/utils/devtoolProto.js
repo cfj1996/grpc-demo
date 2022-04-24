@@ -39,12 +39,12 @@ var $root = ($protobuf.roots["default"] || ($protobuf.roots["default"] = new $pr
           },
           content: {
             type: "string",
-            id: 2
+            id: 3
           },
           tags: {
             rule: "repeated",
             type: "LinkAddTag",
-            id: 3
+            id: 5
           }
         }
       },
@@ -277,6 +277,60 @@ var $root = ($protobuf.roots["default"] || ($protobuf.roots["default"] = new $pr
           listId: {
             type: "string",
             id: 3
+          }
+        }
+      },
+      SearchRequest: {
+        oneofs: {
+          testOneof: {
+            oneof: [
+              "name",
+              "subMessage"
+            ]
+          }
+        },
+        fields: {
+          query: {
+            type: "string",
+            id: 1
+          },
+          pageNumber: {
+            type: "int32",
+            id: 3
+          },
+          resultPerPage: {
+            type: "int32",
+            id: 5
+          },
+          corpus: {
+            type: "Corpus",
+            id: 7
+          },
+          name: {
+            type: "string",
+            id: 9
+          },
+          subMessage: {
+            type: "string",
+            id: 11
+          },
+          mapData: {
+            keyType: "string",
+            type: "int32",
+            id: 13
+          }
+        },
+        nested: {
+          Corpus: {
+            values: {
+              UNIVERSAL: 0,
+              WEB: 1,
+              IMAGES: 2,
+              LOCAL: 3,
+              NEWS: 4,
+              PRODUCTS: 5,
+              VIDEO: 6
+            }
           }
         }
       }
