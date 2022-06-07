@@ -25,17 +25,7 @@ const listService = new ListServiceClient('http://localhost:8080', null, {
 });
 
 export const addList = (data: AddListRequest.AsObject) => {
-  const { title, content, tagsList } = data;
-  const addRequest = new AddListRequest();
-  addRequest.setTitle(title);
-  addRequest.setContent(content);
-  tagsList?.forEach((tag, index) => {
-    const tagRequest = new LinkAddTag();
-    tagRequest.setName(tag.name);
-    addRequest.addTags(tagRequest, index);
-  });
-  console.log('addRequest', addRequest);
-  return listService.add(addRequest, {
+  return listService.add(AddListRequest.fromObject(data), {
     token: '123'
   }).then(response => {
     return response.toObject();
