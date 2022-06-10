@@ -16,7 +16,7 @@ export class AddListRequest extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddListRequest.AsObject;
-  static fromObject(obj: AddListRequest.AsObject): AddListRequest;
+  static fromObject(obj:AddListRequest.AsObject): AddListRequest;
   static toObject(includeInstance: boolean, msg: AddListRequest): AddListRequest.AsObject;
   static serializeBinaryToWriter(message: AddListRequest, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): AddListRequest;
@@ -37,7 +37,7 @@ export class LinkAddTag extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): LinkAddTag.AsObject;
-  static fromObject(obj: LinkAddTag.AsObject): LinkAddTag;
+  static fromObject(obj:LinkAddTag.AsObject): LinkAddTag;
   static toObject(includeInstance: boolean, msg: LinkAddTag): LinkAddTag.AsObject;
   static serializeBinaryToWriter(message: LinkAddTag, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): LinkAddTag;
@@ -73,7 +73,7 @@ export class AddListResponse extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddListResponse.AsObject;
-  static fromObject(obj: AddListResponse.AsObject): AddListResponse;
+  static fromObject(obj:AddListResponse.AsObject): AddListResponse;
   static toObject(includeInstance: boolean, msg: AddListResponse): AddListResponse.AsObject;
   static serializeBinaryToWriter(message: AddListResponse, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): AddListResponse;
@@ -97,7 +97,7 @@ export class DelListRequest extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DelListRequest.AsObject;
-  static fromObject(obj: DelListRequest.AsObject): DelListRequest;
+  static fromObject(obj:DelListRequest.AsObject): DelListRequest;
   static toObject(includeInstance: boolean, msg: DelListRequest): DelListRequest.AsObject;
   static serializeBinaryToWriter(message: DelListRequest, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): DelListRequest;
@@ -116,7 +116,7 @@ export class DelListResponse extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DelListResponse.AsObject;
-  static fromObject(obj: DelListResponse.AsObject): DelListResponse;
+  static fromObject(obj:DelListResponse.AsObject): DelListResponse;
   static toObject(includeInstance: boolean, msg: DelListResponse): DelListResponse.AsObject;
   static serializeBinaryToWriter(message: DelListResponse, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): DelListResponse;
@@ -146,7 +146,7 @@ export class EditListRequest extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): EditListRequest.AsObject;
-  static fromObject(obj: EditListRequest.AsObject): EditListRequest;
+  static fromObject(obj:EditListRequest.AsObject): EditListRequest;
   static toObject(includeInstance: boolean, msg: EditListRequest): EditListRequest.AsObject;
   static serializeBinaryToWriter(message: EditListRequest, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): EditListRequest;
@@ -171,7 +171,7 @@ export class EditListTag extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): EditListTag.AsObject;
-  static fromObject(obj: EditListTag.AsObject): EditListTag;
+  static fromObject(obj:EditListTag.AsObject): EditListTag;
   static toObject(includeInstance: boolean, msg: EditListTag): EditListTag.AsObject;
   static serializeBinaryToWriter(message: EditListTag, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): EditListTag;
@@ -208,7 +208,7 @@ export class EditListResponse extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): EditListResponse.AsObject;
-  static fromObject(obj: EditListResponse.AsObject): EditListResponse;
+  static fromObject(obj:EditListResponse.AsObject): EditListResponse;
   static toObject(includeInstance: boolean, msg: EditListResponse): EditListResponse.AsObject;
   static serializeBinaryToWriter(message: EditListResponse, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): EditListResponse;
@@ -232,7 +232,7 @@ export class FindListRequest extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FindListRequest.AsObject;
-  static fromObject(obj: FindListRequest.AsObject): FindListRequest;
+  static fromObject(obj:FindListRequest.AsObject): FindListRequest;
   static toObject(includeInstance: boolean, msg: FindListRequest): FindListRequest.AsObject;
   static serializeBinaryToWriter(message: FindListRequest, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): FindListRequest;
@@ -268,7 +268,7 @@ export class FindListResponse extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FindListResponse.AsObject;
-  static fromObject(obj: FindListResponse.AsObject): FindListResponse;
+  static fromObject(obj:FindListResponse.AsObject): FindListResponse;
   static toObject(includeInstance: boolean, msg: FindListResponse): FindListResponse.AsObject;
   static serializeBinaryToWriter(message: FindListResponse, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): FindListResponse;
@@ -297,7 +297,7 @@ export class GetListAllRequest extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetListAllRequest.AsObject;
-  static fromObject(obj: GetListAllRequest.AsObject): GetListAllRequest;
+  static fromObject(obj:GetListAllRequest.AsObject): GetListAllRequest;
   static toObject(includeInstance: boolean, msg: GetListAllRequest): GetListAllRequest.AsObject;
   static serializeBinaryToWriter(message: GetListAllRequest, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): GetListAllRequest;
@@ -327,7 +327,7 @@ export class GetListAllResponse extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetListAllResponse.AsObject;
-  static fromObject(obj: GetListAllResponse.AsObject): GetListAllResponse;
+  static fromObject(obj:GetListAllResponse.AsObject): GetListAllResponse;
   static toObject(includeInstance: boolean, msg: GetListAllResponse): GetListAllResponse.AsObject;
   static serializeBinaryToWriter(message: GetListAllResponse, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): GetListAllResponse;
@@ -364,7 +364,7 @@ export class List extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): List.AsObject;
-  static fromObject(obj: List.AsObject): List;
+  static fromObject(obj:List.AsObject): List;
   static toObject(includeInstance: boolean, msg: List): List.AsObject;
   static serializeBinaryToWriter(message: List, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): List;
@@ -394,7 +394,7 @@ export class Tag extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Tag.AsObject;
-  static fromObject(obj: Tag.AsObject): Tag;
+  static fromObject(obj:Tag.AsObject): Tag;
   static toObject(includeInstance: boolean, msg: Tag): Tag.AsObject;
   static serializeBinaryToWriter(message: Tag, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): Tag;
@@ -435,7 +435,7 @@ export class SearchRequest extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SearchRequest.AsObject;
-  static fromObject(obj: SearchRequest.AsObject): SearchRequest;
+  static fromObject(obj:SearchRequest.AsObject): SearchRequest;
   static toObject(includeInstance: boolean, msg: SearchRequest): SearchRequest.AsObject;
   static serializeBinaryToWriter(message: SearchRequest, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): SearchRequest;
