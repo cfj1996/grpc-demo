@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "protoc:commonjs+ts": "protoc.exe --plugin=protoc-gen-grpc-web=protoc-gen-grpc-web.exe --plugin=protoc-gen-js=protoc-gen-js.exe -I=./node_server/protobuf ./node_server/protobuf/*.proto  --js_out=import_style=commonjs,binary:./browser-client/src/proto-build --grpc-web_out=import_style=typescript,mode=grpcwebtext:./browser-client/src/proto-build",
+    "protoc:commonjs+ts/win": "protoc/win/protoc.exe --plugin=protoc-gen-grpc-web=protoc/win/protoc-gen-grpc-web.exe --plugin=protoc-gen-js=protoc/win/protoc-gen-js.exe -I=./node_server/protobuf ./node_server/protobuf/*.proto  --js_out=import_style=commonjs,binary:./browser-client/src/proto-build --grpc-web_out=import_style=typescript,mode=grpcwebtext:./browser-client/src/proto-build",
+    "protoc:commonjs+ts/mac": "protoc/mac/protoc --plugin=protoc-gen-grpc-web=protoc/mac/protoc-gen-grpc-web --plugin=protoc-gen-js=protoc/mac/protoc-gen-js -I=./node_server/protobuf ./node_server/protobuf/*.proto  --js_out=import_style=commonjs,binary:./browser-client/src/proto-build --grpc-web_out=import_style=typescript,mode=grpcwebtext:./browser-client/src/proto-build",
     "protoc:devtools": "node devtools/index.js",
     "start:server_hud": "docker run --rm -itd --name server_hud -v \"G:\\cfj\\grpc-demo\\node_server\":/node_server -p 9090:9090 node",
     "start:envoy": "docker run --rm -d --name envoy --link server_hud:hud -v \"G:\\cfj\\grpc-demo\\envoy.yaml\":/etc/envoy/envoy.yaml -p 8080:8080 envoyproxy/envoy:v1.20.0"
