@@ -13,13 +13,7 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = (function() {
-  if (this) { return this; }
-  if (typeof window !== 'undefined') { return window; }
-  if (typeof global !== 'undefined') { return global; }
-  if (typeof self !== 'undefined') { return self; }
-  return Function('return this')();
-}.call(null));
+var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
 
 goog.exportSymbol('proto.tag.AddTagRequest', null, global);
 goog.exportSymbol('proto.tag.AddTagResponse', null, global);
@@ -409,6 +403,34 @@ proto.tag.AddTagRequest.serializeBinaryToWriter = function(message, writer) {
 };
 
 
+if (jspb.Message.GENERATE_FROM_OBJECT) {
+
+/**
+ * The raw object form of AddTagRequest as accepted by the `fromObject` method.
+ * @record
+ */
+proto.tag.AddTagRequest.ObjectFormat = function() {
+  /** @type {?|undefined} */
+  this.name;
+
+  /** @type {?|undefined} */
+  this.listid;
+};
+
+/**
+ * Loads data from an object into a new instance of this proto.
+ * @param {!proto.tag.AddTagRequest.ObjectFormat} obj
+ *     The object representation of this proto to load the data from.
+ * @return {!proto.tag.AddTagRequest}
+ */
+proto.tag.AddTagRequest.fromObject = function(obj) {
+  var msg = new proto.tag.AddTagRequest();
+  obj.name != null && jspb.Message.setField(msg, 2, obj.name);
+  obj.listid != null && jspb.Message.setField(msg, 3, obj.listid);
+  return msg;
+};
+}
+
 /**
  * optional string name = 2;
  * @return {string}
@@ -581,6 +603,38 @@ proto.tag.AddTagResponse.serializeBinaryToWriter = function(message, writer) {
 };
 
 
+if (jspb.Message.GENERATE_FROM_OBJECT) {
+
+/**
+ * The raw object form of AddTagResponse as accepted by the `fromObject` method.
+ * @record
+ */
+proto.tag.AddTagResponse.ObjectFormat = function() {
+  /** @type {?|undefined} */
+  this.id;
+
+  /** @type {?|undefined} */
+  this.name;
+
+  /** @type {?|undefined} */
+  this.listid;
+};
+
+/**
+ * Loads data from an object into a new instance of this proto.
+ * @param {!proto.tag.AddTagResponse.ObjectFormat} obj
+ *     The object representation of this proto to load the data from.
+ * @return {!proto.tag.AddTagResponse}
+ */
+proto.tag.AddTagResponse.fromObject = function(obj) {
+  var msg = new proto.tag.AddTagResponse();
+  obj.id != null && jspb.Message.setField(msg, 1, obj.id);
+  obj.name != null && jspb.Message.setField(msg, 2, obj.name);
+  obj.listid != null && jspb.Message.setField(msg, 3, obj.listid);
+  return msg;
+};
+}
+
 /**
  * optional string id = 1;
  * @return {string}
@@ -747,6 +801,30 @@ proto.tag.DelTagRequest.serializeBinaryToWriter = function(message, writer) {
 };
 
 
+if (jspb.Message.GENERATE_FROM_OBJECT) {
+
+/**
+ * The raw object form of DelTagRequest as accepted by the `fromObject` method.
+ * @record
+ */
+proto.tag.DelTagRequest.ObjectFormat = function() {
+  /** @type {?|undefined} */
+  this.id;
+};
+
+/**
+ * Loads data from an object into a new instance of this proto.
+ * @param {!proto.tag.DelTagRequest.ObjectFormat} obj
+ *     The object representation of this proto to load the data from.
+ * @return {!proto.tag.DelTagRequest}
+ */
+proto.tag.DelTagRequest.fromObject = function(obj) {
+  var msg = new proto.tag.DelTagRequest();
+  obj.id != null && jspb.Message.setField(msg, 1, obj.id);
+  return msg;
+};
+}
+
 /**
  * optional string id = 1;
  * @return {string}
@@ -876,6 +954,30 @@ proto.tag.DelTagResponse.serializeBinaryToWriter = function(message, writer) {
   }
 };
 
+
+if (jspb.Message.GENERATE_FROM_OBJECT) {
+
+/**
+ * The raw object form of DelTagResponse as accepted by the `fromObject` method.
+ * @record
+ */
+proto.tag.DelTagResponse.ObjectFormat = function() {
+  /** @type {?|undefined} */
+  this.success;
+};
+
+/**
+ * Loads data from an object into a new instance of this proto.
+ * @param {!proto.tag.DelTagResponse.ObjectFormat} obj
+ *     The object representation of this proto to load the data from.
+ * @return {!proto.tag.DelTagResponse}
+ */
+proto.tag.DelTagResponse.fromObject = function(obj) {
+  var msg = new proto.tag.DelTagResponse();
+  obj.success != null && jspb.Message.setField(msg, 1, obj.success);
+  return msg;
+};
+}
 
 /**
  * optional bool success = 1;
@@ -1030,6 +1132,38 @@ proto.tag.EditTagRequest.serializeBinaryToWriter = function(message, writer) {
   }
 };
 
+
+if (jspb.Message.GENERATE_FROM_OBJECT) {
+
+/**
+ * The raw object form of EditTagRequest as accepted by the `fromObject` method.
+ * @record
+ */
+proto.tag.EditTagRequest.ObjectFormat = function() {
+  /** @type {?|undefined} */
+  this.id;
+
+  /** @type {?|undefined} */
+  this.name;
+
+  /** @type {?|undefined} */
+  this.listid;
+};
+
+/**
+ * Loads data from an object into a new instance of this proto.
+ * @param {!proto.tag.EditTagRequest.ObjectFormat} obj
+ *     The object representation of this proto to load the data from.
+ * @return {!proto.tag.EditTagRequest}
+ */
+proto.tag.EditTagRequest.fromObject = function(obj) {
+  var msg = new proto.tag.EditTagRequest();
+  obj.id != null && jspb.Message.setField(msg, 1, obj.id);
+  obj.name != null && jspb.Message.setField(msg, 2, obj.name);
+  obj.listid != null && jspb.Message.setField(msg, 3, obj.listid);
+  return msg;
+};
+}
 
 /**
  * optional string id = 1;
@@ -1221,6 +1355,38 @@ proto.tag.EditTagResponse.serializeBinaryToWriter = function(message, writer) {
 };
 
 
+if (jspb.Message.GENERATE_FROM_OBJECT) {
+
+/**
+ * The raw object form of EditTagResponse as accepted by the `fromObject` method.
+ * @record
+ */
+proto.tag.EditTagResponse.ObjectFormat = function() {
+  /** @type {?|undefined} */
+  this.id;
+
+  /** @type {?|undefined} */
+  this.name;
+
+  /** @type {?|undefined} */
+  this.listid;
+};
+
+/**
+ * Loads data from an object into a new instance of this proto.
+ * @param {!proto.tag.EditTagResponse.ObjectFormat} obj
+ *     The object representation of this proto to load the data from.
+ * @return {!proto.tag.EditTagResponse}
+ */
+proto.tag.EditTagResponse.fromObject = function(obj) {
+  var msg = new proto.tag.EditTagResponse();
+  obj.id != null && jspb.Message.setField(msg, 1, obj.id);
+  obj.name != null && jspb.Message.setField(msg, 2, obj.name);
+  obj.listid != null && jspb.Message.setField(msg, 3, obj.listid);
+  return msg;
+};
+}
+
 /**
  * optional string id = 1;
  * @return {string}
@@ -1386,6 +1552,30 @@ proto.tag.FindTagRequest.serializeBinaryToWriter = function(message, writer) {
   }
 };
 
+
+if (jspb.Message.GENERATE_FROM_OBJECT) {
+
+/**
+ * The raw object form of FindTagRequest as accepted by the `fromObject` method.
+ * @record
+ */
+proto.tag.FindTagRequest.ObjectFormat = function() {
+  /** @type {?|undefined} */
+  this.id;
+};
+
+/**
+ * Loads data from an object into a new instance of this proto.
+ * @param {!proto.tag.FindTagRequest.ObjectFormat} obj
+ *     The object representation of this proto to load the data from.
+ * @return {!proto.tag.FindTagRequest}
+ */
+proto.tag.FindTagRequest.fromObject = function(obj) {
+  var msg = new proto.tag.FindTagRequest();
+  obj.id != null && jspb.Message.setField(msg, 1, obj.id);
+  return msg;
+};
+}
 
 /**
  * optional string id = 1;
@@ -1554,6 +1744,43 @@ proto.tag.FindTagResponse.serializeBinaryToWriter = function(message, writer) {
   }
 };
 
+
+if (jspb.Message.GENERATE_FROM_OBJECT) {
+
+/**
+ * The raw object form of FindTagResponse as accepted by the `fromObject` method.
+ * @record
+ */
+proto.tag.FindTagResponse.ObjectFormat = function() {
+  /** @type {?|undefined} */
+  this.id;
+
+  /** @type {?|undefined} */
+  this.name;
+
+  /** @type {?|undefined} */
+  this.listid;
+
+  /** @type {?|undefined} */
+  this.list;
+};
+
+/**
+ * Loads data from an object into a new instance of this proto.
+ * @param {!proto.tag.FindTagResponse.ObjectFormat} obj
+ *     The object representation of this proto to load the data from.
+ * @return {!proto.tag.FindTagResponse}
+ */
+proto.tag.FindTagResponse.fromObject = function(obj) {
+  var msg = new proto.tag.FindTagResponse();
+  obj.id != null && jspb.Message.setField(msg, 1, obj.id);
+  obj.name != null && jspb.Message.setField(msg, 2, obj.name);
+  obj.listid != null && jspb.Message.setField(msg, 3, obj.listid);
+  obj.list && jspb.Message.setWrapperField(
+      msg, 4, proto.tag.List.fromObject(obj.list));
+  return msg;
+};
+}
 
 /**
  * optional string id = 1;
@@ -1770,6 +1997,34 @@ proto.tag.GetTagAllRequest.serializeBinaryToWriter = function(message, writer) {
 };
 
 
+if (jspb.Message.GENERATE_FROM_OBJECT) {
+
+/**
+ * The raw object form of GetTagAllRequest as accepted by the `fromObject` method.
+ * @record
+ */
+proto.tag.GetTagAllRequest.ObjectFormat = function() {
+  /** @type {?|undefined} */
+  this.page;
+
+  /** @type {?|undefined} */
+  this.pagesize;
+};
+
+/**
+ * Loads data from an object into a new instance of this proto.
+ * @param {!proto.tag.GetTagAllRequest.ObjectFormat} obj
+ *     The object representation of this proto to load the data from.
+ * @return {!proto.tag.GetTagAllRequest}
+ */
+proto.tag.GetTagAllRequest.fromObject = function(obj) {
+  var msg = new proto.tag.GetTagAllRequest();
+  obj.page != null && jspb.Message.setField(msg, 1, obj.page);
+  obj.pagesize != null && jspb.Message.setField(msg, 2, obj.pagesize);
+  return msg;
+};
+}
+
 /**
  * optional int32 page = 1;
  * @return {number}
@@ -1957,6 +2212,36 @@ proto.tag.GetTagAllResponse.serializeBinaryToWriter = function(message, writer) 
   }
 };
 
+
+if (jspb.Message.GENERATE_FROM_OBJECT) {
+
+/**
+ * The raw object form of GetTagAllResponse as accepted by the `fromObject` method.
+ * @record
+ */
+proto.tag.GetTagAllResponse.ObjectFormat = function() {
+  /** @type {?|undefined} */
+  this.count;
+
+  /** @type {?|undefined} */
+  this.dataList;
+};
+
+/**
+ * Loads data from an object into a new instance of this proto.
+ * @param {!proto.tag.GetTagAllResponse.ObjectFormat} obj
+ *     The object representation of this proto to load the data from.
+ * @return {!proto.tag.GetTagAllResponse}
+ */
+proto.tag.GetTagAllResponse.fromObject = function(obj) {
+  var msg = new proto.tag.GetTagAllResponse();
+  obj.count != null && jspb.Message.setField(msg, 1, obj.count);
+  obj.dataList && jspb.Message.setRepeatedWrapperField(
+      msg, 2, obj.dataList.map(
+          proto.tag.Tag.fromObject));
+  return msg;
+};
+}
 
 /**
  * optional int32 count = 1;
@@ -2149,6 +2434,38 @@ proto.tag.Tag.serializeBinaryToWriter = function(message, writer) {
   }
 };
 
+
+if (jspb.Message.GENERATE_FROM_OBJECT) {
+
+/**
+ * The raw object form of Tag as accepted by the `fromObject` method.
+ * @record
+ */
+proto.tag.Tag.ObjectFormat = function() {
+  /** @type {?|undefined} */
+  this.id;
+
+  /** @type {?|undefined} */
+  this.name;
+
+  /** @type {?|undefined} */
+  this.listid;
+};
+
+/**
+ * Loads data from an object into a new instance of this proto.
+ * @param {!proto.tag.Tag.ObjectFormat} obj
+ *     The object representation of this proto to load the data from.
+ * @return {!proto.tag.Tag}
+ */
+proto.tag.Tag.fromObject = function(obj) {
+  var msg = new proto.tag.Tag();
+  obj.id != null && jspb.Message.setField(msg, 1, obj.id);
+  obj.name != null && jspb.Message.setField(msg, 2, obj.name);
+  obj.listid != null && jspb.Message.setField(msg, 3, obj.listid);
+  return msg;
+};
+}
 
 /**
  * optional string id = 1;
@@ -2385,6 +2702,52 @@ proto.tag.List.serializeBinaryToWriter = function(message, writer) {
   }
 };
 
+
+if (jspb.Message.GENERATE_FROM_OBJECT) {
+
+/**
+ * The raw object form of List as accepted by the `fromObject` method.
+ * @record
+ */
+proto.tag.List.ObjectFormat = function() {
+  /** @type {?|undefined} */
+  this.id;
+
+  /** @type {?|undefined} */
+  this.title;
+
+  /** @type {?|undefined} */
+  this.content;
+
+  /** @type {?|undefined} */
+  this.createdat;
+
+  /** @type {?|undefined} */
+  this.updatedat;
+
+  /** @type {?|undefined} */
+  this.tagList;
+};
+
+/**
+ * Loads data from an object into a new instance of this proto.
+ * @param {!proto.tag.List.ObjectFormat} obj
+ *     The object representation of this proto to load the data from.
+ * @return {!proto.tag.List}
+ */
+proto.tag.List.fromObject = function(obj) {
+  var msg = new proto.tag.List();
+  obj.id != null && jspb.Message.setField(msg, 1, obj.id);
+  obj.title != null && jspb.Message.setField(msg, 2, obj.title);
+  obj.content != null && jspb.Message.setField(msg, 3, obj.content);
+  obj.createdat != null && jspb.Message.setField(msg, 4, obj.createdat);
+  obj.updatedat != null && jspb.Message.setField(msg, 5, obj.updatedat);
+  obj.tagList && jspb.Message.setRepeatedWrapperField(
+      msg, 6, obj.tagList.map(
+          proto.tag.Tag.fromObject));
+  return msg;
+};
+}
 
 /**
  * optional string id = 1;
